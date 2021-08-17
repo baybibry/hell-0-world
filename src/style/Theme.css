@@ -1,0 +1,66 @@
+.light{
+    background: var(--secondary-light) !important;
+    transition: 500ms;
+}
+
+.dark{
+    background: var(--primary-dark) !important;
+    transition: 500ms;
+}
+
+.light-sec{
+    background: var(--primary-light) !important;
+    transition: 500ms;
+}
+
+.dark-sec{
+    background: var(--secondary-dark) !important;
+    transition: 500ms;
+}
+
+.btn-dark{
+    background: var(--secondary-dark) !important;
+    transition: 500ms;
+}
+
+.btn-light{
+    background: var(--primary-light) !important;
+    transition: 500ms;
+}
+
+.text-light{
+    color: var(--secondary-dark) !important;
+    transition: 500ms;
+}
+
+.text-dark{
+    color: white !important;
+    transition: 500ms;
+}
+
+.text-light-sec{
+    color: var(--primary-dark) !important;
+    transition: 500ms;
+}
+
+.text-dark-sec{
+    color: var(--primary-light) !important;
+    transition: 500ms;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.hidden{
+    display: none;
+    visibility: hidden;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.text-white{
+    color: white;
+}
