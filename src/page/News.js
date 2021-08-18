@@ -5,8 +5,6 @@ import { Context } from '../context/Context';
 function News() {
 
     const { theme, news } = useContext(Context);
-    
-    console.log(process.env.URL)
 
     return (
         <div
