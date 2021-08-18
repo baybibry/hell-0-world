@@ -4,3 +4,4 @@ export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
 export const ADDNOTIF = 'ADDNOTIF';
 export const REMOVENOTIF = 'REMOVENOTIF';
+export const NEWS = 'NEWS';

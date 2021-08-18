@@ -4,7 +4,8 @@ const store = {
     theme: true,
     lang: 'EN',
     flag: '',
-    notif:[]
+    notif:[],
+    news: []
 }
 
 export default store;

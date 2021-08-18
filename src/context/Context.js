@@ -1,4 +1,4 @@
-import { THEME, LANG, LOGIN, LOGOUT, REMOVENOTIF, ADDNOTIF } from './Types'
+import { THEME, LANG, LOGIN, LOGOUT, REMOVENOTIF, ADDNOTIF, NEWS } from './Types'
 import { createContext, useReducer, useEffect } from "react";
 import contextReducer from "./Reducer";
 import store from './Store'
@@ -53,6 +53,20 @@ function ContextProvider({children}){
     }
 
     useEffect(() => {
+
+        (
+            async () =>{
+                const res = await fetch(process.env.REACT_APP_URL + process.env.REACT_APP_API_KEY);
+                const data = await res.json()
+
+                dispatch({
+                    type: NEWS,
+                    data: data.articles
+                })
+            }
+        )()
+
+
         const theme = localStorage.getItem('theme');
         const lang = localStorage.getItem('lang');
         const userauth = localStorage.getItem('userAuth');
@@ -65,9 +79,7 @@ function ContextProvider({children}){
         }
 
         if(userauth){
-
             authUser(JSON.parse(userInfo))
-
         }
 
     }, []);
@@ -99,6 +111,7 @@ function ContextProvider({children}){
                 flag: state.flag,
                 userInfo: state.userInfo,
                 notifs: state.notif,
+                news: state.news,
 
                 changeTheme,
                 changeLang,

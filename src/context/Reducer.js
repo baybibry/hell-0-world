@@ -1,4 +1,4 @@
-import { THEME, LANG, LOGIN, LOGOUT, REMOVENOTIF, ADDNOTIF } from './Types'
+import { THEME, LANG, LOGIN, LOGOUT, REMOVENOTIF, ADDNOTIF, NEWS } from './Types'
 
 export default function contextReducer(state , action){
 
@@ -45,7 +45,13 @@ export default function contextReducer(state , action){
                 ...state,
                 notif: state.notif.filter(obj => obj.id !== data)
             }
-        
+
+        case NEWS:
+            return{
+                ...state,
+                news: [...data]
+            }
+
         default:
             return state;
 
