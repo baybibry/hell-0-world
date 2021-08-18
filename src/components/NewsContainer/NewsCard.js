@@ -19,7 +19,7 @@ function NewsCard({ author, desc, title, url, image})
                     </h1>
 
                     <h3>
-                        By <span> {author} </span>
+                        By <span> {author ? author : 'Anonymous'} </span>
                     </h3>
                 
                     <p>
