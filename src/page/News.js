@@ -6,12 +6,12 @@ function News() {
 
     const { theme, news } = useContext(Context);
     
+    console.log(news)
+
     return (
         <div
             className={`${theme ? 'text-dark dark' : 'text-light light'}`}
         >
-
-
             <NewsCon news={news}/>
 
         </div>
