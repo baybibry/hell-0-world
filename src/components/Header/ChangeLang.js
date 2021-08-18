@@ -5,9 +5,9 @@ import { NavLink } from 'react-router-dom';
 
 function ChangeLang({ flag, changeLang }) {
 
-    console.log(typeof flag)
-
     const [hover, sethover] = useState(false);
+
+    console.log(flag)
 
     const lang = [
         {

@@ -35,6 +35,7 @@ function Header() {
                 <input
                     type='checkbox'
                     id='navbar'
+                    checked={toggle}
                 />
 
                 <div className={style.headerDropDown}>
@@ -42,13 +43,13 @@ function Header() {
                     <ul>
                         
                         <NavLink to='/'>
-                            <li>
+                            <li onClick={() => setToggle(!toggle)}>
                                     Home
                             </li>
                         </NavLink>
 
                         <NavLink to='/news'>
-                            <li>
+                            <li onClick={() => setToggle(!toggle)}>
                                     News
                             </li>
                         </NavLink>
