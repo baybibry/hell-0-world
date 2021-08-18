@@ -3,9 +3,7 @@ import NewsCard from './NewsCard'
 import style from '../../style/News.module.css'
 
 function NewsCon({ news }) {
-
-    console.log(news)
-
+    
     return (
         <div 
         className={ style.newsWrapper }
