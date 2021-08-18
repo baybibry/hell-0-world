@@ -21,6 +21,8 @@ function ContextProvider({children}){
 
     const [ state, dispatch ] = useReducer(contextReducer, store);
 
+    console.log(process.env.NODE_ENV);
+
     function changeTheme(bool){
         dispatch({
             type: THEME,
