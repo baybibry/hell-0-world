@@ -1,12 +1,9 @@
-import './style/App.css';
 import './style/Theme.css'
 import './style/fontface.css'
 import { Home, News } from './page'
-import NavMenu from './components/Navmenu';
 import ContextProvider from './context/Context';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
-const baseUrl = '/:locale(th|ch|vn)' ?? '/';
+import HeaderHome from './components/Header/HeaderHome';
 
 function App() {
   return (
@@ -14,14 +11,20 @@ function App() {
     <ContextProvider>
 
       <Router>
-        
-        <NavMenu/>
+
+      <HeaderHome/>
+
 
         <Switch>
           
           <Route 
             exact 
-            path={'/'}
+            path='/'
+            component={Home}
+          />
+
+          <Route 
+            path='/:lang(ch|th|vn)' 
             component={Home}
           />
 
@@ -30,13 +33,11 @@ function App() {
             component={News}
           />
 
-          {/* <Route 
-            exact 
-            path='/:lang' 
-            component={Home}
-          /> */}
+          <Route 
+            path='/news/:lang(ch|th|vn)' 
+            component={News}
+          />
 
-        
         </Switch>
       
       </Router>
