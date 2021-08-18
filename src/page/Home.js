@@ -13,7 +13,7 @@ function Home() {
     const [search, setsearch] = useState('')
     const [icons, seticons] =  useState()
 
-    const {t, i18n} = useTranslation();
+    const { t } = useTranslation();
 
     useEffect(() => {
 
