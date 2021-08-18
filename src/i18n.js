@@ -1,11 +1,12 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector'
 
 i18n.on('changeLang', function(lang){
 
     let fllbck = i18n.options.fallbackLng ;
 
-    if(lang == fllbck[0]){
+    if(lang === fllbck[0]){
         if(window.location.pathname.includes('/' + fllbck[0])){
             const url = window.location.pathname.replace('/', fllbck[0]);
             window.location.replace(url);
@@ -45,7 +46,7 @@ const resources = {
 }
 
 
-i18n.use(initReactI18next)
+i18n.use(initReactI18next).use(LanguageDetector)
 .init(
     {
         resources,
