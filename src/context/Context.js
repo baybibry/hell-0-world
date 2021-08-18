@@ -2,6 +2,7 @@ import { THEME, LANG, LOGIN, LOGOUT, REMOVENOTIF, ADDNOTIF, NEWS } from './Types
 import { createContext, useReducer, useEffect } from "react";
 import contextReducer from "./Reducer";
 import store from './Store'
+import i18next from 'i18next';
 
 export const Context = createContext();
 
@@ -31,6 +32,8 @@ function ContextProvider({children}){
     }
 
     function changeLang(lang, flag){
+
+        i18next.changeLanguage(lang)
 
         dispatch({
             type: LANG,
@@ -65,7 +68,6 @@ function ContextProvider({children}){
                 })
             }
         )()
-
 
         const theme = localStorage.getItem('theme');
         const lang = localStorage.getItem('lang');

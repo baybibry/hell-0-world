@@ -25,7 +25,6 @@ export default function contextReducer(state , action){
                 auth: data,
                 useInfo: {}
             }
-            break;
         
         case LOGIN:
             return {
