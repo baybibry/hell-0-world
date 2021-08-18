@@ -11,7 +11,7 @@ function NewsCon({ news }) {
             {
                 news?.length !== 0 ?
 
-                news.map((obj, i) => {
+                news?.map((obj, i) => {
                 
                     const {author, description, title, url, urlToImage} = obj;
 
