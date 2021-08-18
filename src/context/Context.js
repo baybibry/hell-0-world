@@ -6,22 +6,20 @@ import i18next from 'i18next';
 
 export const Context = createContext();
 
-let key;
-let lnk;
-
-if(process.env.NODE_ENV !== 'production') {
-    lnk = process.env.REACT_APP_URL;
-    key = process.env.REACT_APP_API_KEY;
-}else{
-    lnk = process.env.URL;
-    key = process.env.API_KEY;
-}
-
 function ContextProvider({children}){
 
-    const [ state, dispatch ] = useReducer(contextReducer, store);
+    let key;
+    let lnk;
 
-    console.log(process.env.NODE_ENV);
+    if(process.env.NODE_ENV !== 'production') {
+        lnk = process.env.REACT_APP_URL;
+        key = process.env.REACT_APP_API_KEY;
+    }else{
+        lnk = process.env.URL;
+        key = process.env.API_KEY;
+    }
+
+    const [ state, dispatch ] = useReducer(contextReducer, store);
 
     function changeTheme(bool){
         dispatch({
@@ -72,14 +70,16 @@ function ContextProvider({children}){
 
         (
             async () =>{
-                const res = await fetch(lnk + key);
+                const res = await fetch(lnk + '9164fb3b9faa45b4898806e8a5336356');
                 const data = await res.json();
+
+                console.log(data)
 
                 console.log(data.articles)
 
                 dispatch({
                     type: NEWS,
-                    data: data.articles
+                    data: JSON.parse(data.articles)
                 })
             }
         )()
