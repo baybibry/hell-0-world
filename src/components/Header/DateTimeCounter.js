@@ -34,7 +34,7 @@ function DateTimeCounter() {
     })
     
     let minutes = min < 10 ? '0' + min : min;
-    let time = hour % 12 < 10 ? hour % 12 !== 12  ? 12 : '0' + hour % 12 : hour % 12;
+    let time = hour % 12 < 10 ?  '0' + hour % 12 : hour % 12;
     let seco = sec < 10 ? '0' + sec : sec;
 
     return (

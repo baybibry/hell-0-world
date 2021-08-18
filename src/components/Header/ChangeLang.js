@@ -1,13 +1,13 @@
-import React, { useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import style from '../../style/ChangeLang.module.css';
 import { Ch, Th, En, Vn } from '../../img';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 function ChangeLang({ flag, changeLang }) {
 
     const [hover, sethover] = useState(false);
-
-    console.log(flag)
+    
+    const { pathname } = useLocation();
 
     const lang = [
         {
@@ -65,7 +65,9 @@ function ChangeLang({ flag, changeLang }) {
                 {
                     lang.map((obj, i) => {
 
-                        let url = obj.lng === 'en' ? '/' : '/' + obj.lng
+                        let loc = pathname.includes('/news') ? `${pathname.replace(pathname, '/news')}/` : '/'
+                        
+                        let pth = obj.lng === 'en' ? `${loc}` : `${loc}${obj.lng}`;
 
                         return (
                             obj.flg !== flag &&
@@ -77,7 +79,7 @@ function ChangeLang({ flag, changeLang }) {
                             >
 
                                 <NavLink 
-                                    to={url}
+                                    to={pth}
                                     style={{ color: 'white' }}
                                 >
                                     

@@ -10,7 +10,7 @@ import { Context } from '../../context/Context';
 
 function Header() {
 
-    const { theme, changeTheme, flag, changeLang, auth, userInfo } = useContext(Context);
+    const { theme, changeTheme, flag, changeLang, lang, auth, userInfo } = useContext(Context);
     
     const [toggle, setToggle] = useState(false);
 
@@ -70,7 +70,7 @@ function Header() {
                         </li>
 
                         <li>
-                            <ChangeLang flag={flag} changeLang={changeLang}/>
+                            <ChangeLang flag={flag} changeLang={changeLang} language={lang}/>
                         </li>
 
                         <li>
