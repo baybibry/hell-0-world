@@ -7,13 +7,16 @@ function NewsCard({ author, desc, title, url, image})
             <div className={style.cardWrapper}>
 
                 <div className={style.cardImgWrapper}>
+
                     <img
                         src={image}
                         alt={title}
                     />
+                    
                 </div>
 
                 <div className={style.cardContentWrapper}>
+
                     <h1>
                        {title}
                     </h1>
