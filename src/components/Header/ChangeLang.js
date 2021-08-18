@@ -5,6 +5,8 @@ import { NavLink } from 'react-router-dom';
 
 function ChangeLang({ flag, changeLang }) {
 
+    console.log(typeof flag)
+
     const [hover, sethover] = useState(false);
 
     const lang = [
@@ -65,10 +67,10 @@ function ChangeLang({ flag, changeLang }) {
 
                         let url = obj.lng === 'en' ? '/' : '/' + obj.lng
 
-                        // return (
-                        //     obj.flg !== flag &&
+                        return (
+                            obj.flg !== flag &&
                             
-                            return (<div  
+                            <div  
                                 key={i}
                                 className={style.langColor}
                                 onClick={() => changeLang(obj.lng , obj.flg) }
@@ -85,8 +87,8 @@ function ChangeLang({ flag, changeLang }) {
 
                                 </NavLink>
 
-                            </div> )
-                        // )
+                            </div> 
+                        )
 
                     })
                 }
