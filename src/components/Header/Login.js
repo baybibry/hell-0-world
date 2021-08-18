@@ -1,5 +1,4 @@
-import React, { useRef, useState } from 'react'
-import { useContext } from 'react/cjs/react.development'
+import React, { useRef, useState, useContext } from 'react'
 import { Context } from '../../context/Context'
 import style from '../../style/Login.module.css'
 import { HiOutlineChevronDown, HiOutlineChevronLeft, HiUser, HiOutlineLockClosed } from "react-icons/hi";
