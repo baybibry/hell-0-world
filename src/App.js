@@ -33,11 +33,6 @@ function App() {
             component={News}
           />
 
-          <Route 
-            path='/news/:lang(ch|th|vn)' 
-            component={News}
-          />
-
         </Switch>
       
       </Router>
