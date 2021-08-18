@@ -60,7 +60,9 @@ function ContextProvider({children}){
         (
             async () =>{
                 const res = await fetch(process.env.REACT_APP_URL + process.env.REACT_APP_API_KEY);
-                const data = await res.json()
+                const data = await res.json();
+
+                console.log(data.articles)
 
                 dispatch({
                     type: NEWS,

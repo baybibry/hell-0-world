@@ -45,6 +45,8 @@ export default function contextReducer(state , action){
             }
 
         case NEWS:
+
+            console.log(data)
             return{
                 ...state,
                 news: data
