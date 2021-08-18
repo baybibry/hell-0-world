@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import style from '../../style/IconCards.module.css'
 
 function IconCard({ tag, copy, id }) {

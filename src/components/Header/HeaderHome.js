@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import style from '../../style/HeaderHome.module.css';
 import DateTimeCounter from './DateTimeCounter';
@@ -12,8 +12,7 @@ import { Context } from '../../context/Context';
 function Header() {
 
     const { theme, changeTheme, flag, changeLang, auth, userInfo} = useContext(Context);
-
-    const [baseUrl, setBaseUrl] = useState('/');
+    
     const [toggle, setToggle] = useState(false);
 
     return (

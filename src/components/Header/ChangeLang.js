@@ -1,12 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import style from '../../style/ChangeLang.module.css';
 import { Ch, Th, En, Vn } from '../../img';
 import { NavLink } from 'react-router-dom';
-import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 
 function ChangeLang({ flag, changeLang }) {
-
-    const { pathname } = useLocation()
 
     const [hover, sethover] = useState(false);
 
@@ -68,22 +65,31 @@ function ChangeLang({ flag, changeLang }) {
 
                         let url = obj.lng === 'en' ? '/' : '/' + obj.lng
 
-                        if(obj.flg != flag){
+                        if(obj.flg !== flag){
+
                             return(
+
                                 <div  
                                     key={i}
                                     className={style.langColor}
                                     onClick={() => changeLang(obj.lng , obj.flg) }
                                 >
+
                                     <NavLink 
                                         to={url}
                                         style={{ color: 'white' }}
                                     >
+                                        
                                         <span> { obj.name } </span>
+
                                         <img src={obj.flg} alt='english'/>
+
                                     </NavLink>
+
                                 </div>   
+
                             )
+
                         }
                     })
                 }

@@ -10,9 +10,7 @@ function NewsCon({ news }) {
 
                 news.map((obj, i) => {
                 
-                    const {author, content, description, 
-                            publishAt, source, title, 
-                            url, urlToImage} = obj;
+                    const {author, description, title, url, urlToImage} = obj;
 
                     return(
                         <NewsCard
