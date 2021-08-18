@@ -1,7 +1,6 @@
 import { THEME, LANG, LOGIN, LOGOUT, REMOVENOTIF, ADDNOTIF, NEWS } from './Types'
 
 export default function contextReducer(state , action){
-
     let data = action.data;
 
     switch (action.type) {
@@ -48,7 +47,7 @@ export default function contextReducer(state , action){
         case NEWS:
             return{
                 ...state,
-                news: [...data]
+                news: data
             }
 
         default:
