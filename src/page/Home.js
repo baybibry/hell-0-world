@@ -13,7 +13,7 @@ function Home() {
     const [search, setsearch] = useState('')
     const [icons, seticons] =  useState()
 
-    const { t } = useTranslation();
+    const {t, i18n} = useTranslation();
 
     useEffect(() => {
 
@@ -35,9 +35,6 @@ function Home() {
         <div
             className={`${theme ? 'text-dark dark' : 'text-light light'} ${style.body}`}
         >
-
-
-            {/* <HeaderHome/> */}
 
             <div className={style.bodyMaxWidth}>
 

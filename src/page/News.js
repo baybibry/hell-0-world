@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import NewsCon from '../components/NewsContainer/NewsCon'
 import { Context } from '../context/Context';
 
