@@ -6,7 +6,7 @@ function News() {
 
     const { theme, news } = useContext(Context);
     
-    console.log(news)
+    console.log(process.env.URL)
 
     return (
         <div
