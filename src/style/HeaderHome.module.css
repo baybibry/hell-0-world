@@ -37,8 +37,23 @@
     height: fit-content;
 }
 
-input:checked ~ .headerDropDown{
+input ~ .headerDropDown{
     display: none;
+}
+
+input:checked ~ .headerDropDown{
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: fit-content;
+    flex-direction: column;
+    background-color: green;
+    bottom: 0;
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    height: fit-content;
 }
 
 .headerDropDown ul{
@@ -112,8 +127,8 @@ input:checked ~ .headerDropDown{
         align-items: center;
     }
 
-    input:checked ~ .headerDropDown{
-        display: flex;
+    input ~ .headerDropDown{
+        display: flex ;
     }
 
     .headerDropDown{

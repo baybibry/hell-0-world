@@ -138,6 +138,7 @@
     height: 250px;
     width: 100%;
     transition: all 500ms;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 900px) {
@@ -158,6 +159,7 @@
     .FormWrapperShow{
         height: 250px;
         width: 350px;
+        overflow: unset;
     }
 
     .FormWrapperHide{
@@ -172,23 +174,6 @@
     .loginBtn{
         width: 100%;
         justify-content: center;
-    }
-
-    .FormWrapperHide::before{
-
-        content: '';
-        width: 0;
-        height: 0;
-        background-color: darkgreen;
-        position: absolute;
-        top: 0;
-        margin-top: 1.5px;
-        left: 50%;
-        z-index: -2;
-        transition: all 500ms ease;
-        transform: rotate(45deg) translateX(-50%);
-        transition: height 600ms;
-    
     }
     
     .FormWrapperShow::before{
