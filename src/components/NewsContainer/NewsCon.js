@@ -4,9 +4,12 @@ import style from '../../style/News.module.css'
 
 function NewsCon({ news }) {
     return (
-        <div className={ style.newsWrapper }>
+        <div 
+        className={ style.newsWrapper }
+        >
+
             {
-                news.length !== 0 ?
+                news?.length !== 0 ?
 
                 news.map((obj, i) => {
                 
@@ -31,6 +34,7 @@ function NewsCon({ news }) {
                     Loading ...
                 </div>    
             }
+
         </div>
     )
 }
