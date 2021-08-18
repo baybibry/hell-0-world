@@ -1,11 +1,13 @@
+import { En } from '../img'
+
 const store = {
     auth: false,
     userInfo: {},
     theme: true,
     lang: 'EN',
-    flag: '',
+    flag: En,
     notif:[],
-    news: []
+    news: null
 }
 
 export default store;
