@@ -6,6 +6,17 @@ import i18next from 'i18next';
 
 export const Context = createContext();
 
+let key;
+let lnk;
+
+if(process.env.NODE_ENV !== 'production') {
+    lnk = process.env.REACT_APP_URL;
+    key = process.env.REACT_APP_API_KEY;
+}else{
+    lnk = process.env.URL;
+    key = process.env.API_KEY;
+}
+
 function ContextProvider({children}){
 
     const [ state, dispatch ] = useReducer(contextReducer, store);
@@ -59,7 +70,7 @@ function ContextProvider({children}){
 
         (
             async () =>{
-                const res = await fetch(process.env.REACT_APP_URL + process.env.REACT_APP_API_KEY);
+                const res = await fetch(lnk + key);
                 const data = await res.json();
 
                 console.log(data.articles)
