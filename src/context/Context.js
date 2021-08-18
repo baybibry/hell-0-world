@@ -11,12 +11,16 @@ function ContextProvider({children}){
     let key;
     let lnk;
 
-    if(process.env.NODE_ENV !== 'production') {
+    if(process.env.NODE_ENV === 'production') {
+
         lnk = process.env.REACT_APP_URL;
         key = process.env.REACT_APP_API_KEY;
+
     }else{
-        lnk = process.env.URL;
-        key = process.env.API_KEY;
+
+        lnk = process.env.REACT_APP_URL;
+        key = process.env.REACT_APP_API_KEY;
+
     }
 
     const [ state, dispatch ] = useReducer(contextReducer, store);
@@ -70,16 +74,12 @@ function ContextProvider({children}){
 
         (
             async () =>{
-                const res = await fetch(lnk + '9164fb3b9faa45b4898806e8a5336356');
+                const res = await fetch(lnk + key);
                 const data = await res.json();
-
-                console.log(data)
-
-                console.log(data.articles)
 
                 dispatch({
                     type: NEWS,
-                    data: JSON.parse(data.articles)
+                    data: data.articles
                 })
             }
         )()
