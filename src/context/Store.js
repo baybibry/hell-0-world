@@ -7,6 +7,4 @@ const store = {
     notif:[]
 }
 
-export default store
-
-// module.exports = store
+export default store;
