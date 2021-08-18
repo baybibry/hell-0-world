@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import style from '../style/DateTime.module.css'
+import style from '../../style/DateTime.module.css'
 
 function DateTimeCounter() {
 

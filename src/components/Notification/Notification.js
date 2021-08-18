@@ -49,7 +49,7 @@ function Notification({text, removed, id}) {
             removed(id)
         }
 
-    });
+    }, [width]);
 
     return (
         <div 
