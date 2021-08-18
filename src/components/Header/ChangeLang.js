@@ -65,10 +65,10 @@ function ChangeLang({ flag, changeLang }) {
 
                         let url = obj.lng === 'en' ? '/' : '/' + obj.lng
 
-                        return (
-                            obj.flg !== flag &&
+                        // return (
+                        //     obj.flg !== flag &&
                             
-                            <div  
+                            return (<div  
                                 key={i}
                                 className={style.langColor}
                                 onClick={() => changeLang(obj.lng , obj.flg) }
@@ -85,8 +85,8 @@ function ChangeLang({ flag, changeLang }) {
 
                                 </NavLink>
 
-                            </div> 
-                        )
+                            </div> )
+                        // )
 
                     })
                 }
