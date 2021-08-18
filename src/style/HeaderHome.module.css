@@ -1,0 +1,127 @@
+.headerWrapper{
+    background-color: green;
+    width: 100%;
+    margin: auto;
+    height: 10vh;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.headerNav{
+    display: inline;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.headerNav input{
+    display: none;
+}
+
+.headerDropDown{
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: fit-content;
+    flex-direction: column;
+    background-color: green;
+    bottom: 0;
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    height: fit-content;
+}
+
+input:checked ~ .headerDropDown{
+    display: none;
+}
+
+.headerDropDown ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.headerDropDown ul li{
+    font-size: 1.05rem;
+    margin: 0 1rem;
+    text-transform: uppercase;
+    color: white;
+    padding: 1rem 0;
+    text-align: left;
+}
+
+.toggleBtn{
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+}
+
+.toggleBtnIcon{
+    font-size: 2rem;
+}
+
+.headerMobileDisplay{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.greeting{
+    font-size: 1.5rem !important;
+}
+
+.greeting span{
+    color: yellow;
+}
+
+@media screen and (min-width: 900px) {
+
+    .headerMobileDisplay{
+        width: auto;
+    }
+
+    .greeting{
+        font-size: .85rem !important;
+    }
+
+    .headerNav{
+        display: flex;
+    }
+
+    .toggleBtn{
+        display: none;
+    }
+
+    .headerNav{
+        padding: 0 5rem;
+    }
+
+    .headerDropDown ul{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    input:checked ~ .headerDropDown{
+        display: flex;
+    }
+
+    .headerDropDown{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+        background-color: transparent;
+    }    
+}

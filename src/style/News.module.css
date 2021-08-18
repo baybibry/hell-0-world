@@ -1,0 +1,142 @@
+.newsWrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1rf);
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.cardWrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: fit-content;
+    position: relative;
+    padding: 0;
+    width: 90%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.loading{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    text-align: center;
+}
+
+.newsNoContent{
+    height: 100vh;
+}
+
+.cardWrapper a{
+    position: relative;
+    background-color: orange;
+    color:white;
+    padding: .75rem 1rem;
+}
+
+
+.cardImgWrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    margin:0;
+}
+
+.cardImgWrapper img{
+    width: 100%;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.cardContentWrapper{
+    padding: 1rem;
+    line-height: 50px;
+    color: gray;
+}
+
+.cardContentWrapper h1{
+    font-size: 1.3rem;
+    line-height: 1.2;
+    color: black;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    line-height: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    padding-top: 15px;
+}
+
+.cardContentWrapper h3{
+    font-size: 1rem;
+}
+
+.cardContentWrapper h3 span{
+    color: orange;
+}
+
+.cardContentWrapper p{
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    line-height: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1;
+}
+
+@media screen and (min-width: 900px) {
+    .cardWrapper{
+        display: block;
+        /* flex-direction: row; */
+        width: 100%;
+        height: 250px;
+        max-width: 800px;
+        padding: 2rem 1rem;
+        align-items: center;
+    }
+    
+    .cardImgWrapper{
+        width: 45%;
+        height: 100%;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        /* padding: 1rem 0; */
+        vertical-align: middle;
+    }
+
+    
+    .cardImgWrapper img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    .cardContentWrapper{
+        padding: 1rem;
+        line-height: 50px;
+        color: gray;
+        width: 55%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .cardWrapper a{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .cardContentWrapper h3{
+        font-size: .75rem;
+    }
+}

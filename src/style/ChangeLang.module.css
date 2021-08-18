@@ -1,0 +1,142 @@
+.langWrapper{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+}
+
+.langWrapper input{
+    display: none;
+}
+
+.langPicked{
+    width: 35px;
+    height: 35px;
+}
+
+.langPicked image{
+    width: 50px;
+    height: 50px;
+}
+
+.langWrapper input:checked ~ .langPickerWrapper{
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 107, 0);
+    position: absolute;
+    cursor: pointer;
+    padding: .5rem;
+    height: 6rem;
+    width: 100%;
+    top: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    right: 0;
+
+}
+
+.langWrapper input ~ .langPickerWrapper{
+    
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    padding: .5rem 0;
+    width: fit-content;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    margin-left: 5rem;
+
+}
+
+.langColor{
+    width: fit-content;
+    height: 35px;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2px 4px;
+}
+
+.langColor img{
+    width: 25px;
+    margin-left: 0;
+}
+
+.langColor span{
+    display: none;
+}
+
+.langColor:hover{
+    background-color: darkgreen;
+}
+
+
+@media screen and (min-width: 900px) {
+
+    .langWrapper{
+        width: 35px;
+        height: 35px;
+        display: unset;
+    }
+
+    .langPicked{
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    .langWrapper input:checked ~ .langPickerWrapper{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 107, 0);
+        position: absolute;
+        cursor: pointer;
+        padding: 1rem 0;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0,0,0,.1);
+        right: -2rem;
+        height: auto;
+        left: unset;
+        width: fit-content;
+        top: unset;
+        margin: unset;
+        transform: unset;
+    }
+    
+    .langWrapper input ~ .langPickerWrapper{
+        display: none;
+        position: unset;
+        margin: unset;
+    }
+
+    .langColor{
+        width: 150px;
+    }
+
+    .langColor img{
+        margin-left: 5px;
+    }
+
+    .langColor span{
+        display: inline;
+    }
+
+    .langPicked image{
+        width: 50px;
+        height: 50px;
+    }
+
+}

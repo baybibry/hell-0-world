@@ -1,0 +1,115 @@
+.themeWrapper{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+}
+
+.themeWrapper input{
+    display: none;
+}
+
+.themePicked{
+    background-color: blue;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.themeWrapper input:checked ~ .themePickerWrapper{
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 107, 0);
+    position: absolute;
+    cursor: pointer;
+    padding: .5rem;
+    height: 6rem;
+    width: 100%;
+    top: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    right: 0;
+
+}
+
+.themeWrapper input ~ .themePickerWrapper{
+    
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    padding: .5rem 0;
+    width: fit-content;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    margin-left: 5rem;
+
+}
+
+.themeColor{
+    background-color: blue;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin: 0 1rem;
+    border: 2px solid white;
+}
+
+
+@media screen and (min-width: 900px) {
+
+    .themeWrapper{
+        width: 35px;
+        height: 35px;
+        display: unset;
+    }
+
+    .themePicked{
+        background-color: blue;
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    .themeWrapper input:checked ~ .themePickerWrapper{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 107, 0);
+        position: absolute;
+        cursor: pointer;
+        padding: .75rem;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0,0,0,.1);
+        right: -2rem;
+        left: unset;
+        width: fit-content;
+        top: unset;
+        margin: unset;
+        transform: unset;
+        height: 7rem;
+    }
+    
+    .themeWrapper input ~ .themePickerWrapper{
+        display: none;
+        position: unset;
+        margin: unset;
+    }
+
+    .themeColor{
+        margin: unset;
+    }
+
+}
