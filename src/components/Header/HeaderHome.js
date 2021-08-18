@@ -35,7 +35,7 @@ function Header() {
                 <input
                     type='checkbox'
                     id='navbar'
-                    checked={toggle}
+                    onChange={e => {}}
                 />
 
                 <div className={style.headerDropDown}>
