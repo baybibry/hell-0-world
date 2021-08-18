@@ -9,7 +9,7 @@ function NewsCon({ news }) {
         >
 
             {
-                news?.length !== 0 ?
+                news ?
 
                 news?.map((obj, i) => {
                 
